@@ -19,7 +19,7 @@ export default function App() {
     return (id = nanoid(10));
   };
 
-  const formSubmitHandler = ({ name, number }) => {
+  const formSubmitHandler = (name, number) => {
     const newContact = {
       id: makeIdContact(),
       name,
@@ -47,6 +47,7 @@ export default function App() {
   //     name.toLowerCase().includes(normalizedFilter)
   //   );
   // };
+
   const getVisibleContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
